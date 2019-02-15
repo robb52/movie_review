@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Movie Reviews", root_path, class: "navbar-brand" %>
+    </div>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li><%= link_to "New Movie", new_movie_path, class: "active" %></li>
+        <li><%= link_to "Account", edit_user_registration_path, class: "active" %></li>
+      <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>
+        <li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
+      <% end %>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-second my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
