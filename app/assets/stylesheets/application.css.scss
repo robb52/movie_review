@@ -13,9 +13,14 @@
  */
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Coiny|Oxygen');
 
 body {
-  background-color: #AA4847;
+  background-color: #0455C2;
+}
+
+nav {
+  box-shadow: 5px 8px #043B86;
 }
 
 .review_title {
@@ -36,3 +41,42 @@ body {
 img.img-thumbnail {
   margin-top: 20px;
 }
+
+.navbar-brand {
+  letter-spacing: -1px;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+
+  font-family: 'Oxygen', sans-serif;
+  margin-bottom: 10px;
+  margin-left: -10px;
+  padding-right: 10px;
+  font-size: 30px;
+}
+
+a.active {
+  font-size: 17px;
+  font-family: 'Coiny', cursive;
+  padding: 0 10px 0 0;
+  color: grey;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+a.active:hover, a.active:focus, a.active:active {
+  color: green;
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+
+
+
+
+
