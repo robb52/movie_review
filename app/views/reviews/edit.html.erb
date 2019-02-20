@@ -1,5 +1,15 @@
-<h1>Editing Review</h1>
+<div class="col-6 offset-3"> 
 
-<%= render 'form', review: @review %>
+  <h1>Editing Review</h1>
 
-<%= link_to 'Back', movie_path(@movie) %>
+  <div class="card">
+    <div class="card-body">
+
+      <%= render 'form', review: @review %>
+
+    </div>
+  </div>
+
+  <%= link_to 'Back', movie_path(@movie), class: "btn btn-primary btn-sm" %>
+
+</div>
